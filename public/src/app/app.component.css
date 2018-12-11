@@ -1,0 +1,64 @@
+.container {
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+.submitCakeBtn {
+    background-color: teal;
+    color: white;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.createCakePanel {
+    border: 2px solid teal;
+    background-color: white;
+    width: 280px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 50px;
+}
+.createCakePanelSubTitle {
+    margin: 4px;
+    border-bottom: 2px solid black;
+}
+.displayCakes {
+    display: inline-block;
+    vertical-align: top;
+    max-height: 350px;
+    width: 500px;
+    overflow: auto;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 2px solid teal;
+    padding: 10px;
+}
+.bakerName {
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+.row {
+    background-color: aliceblue;
+    border: 3px solid teal;
+    padding: 20px;
+    border-radius: 10px;
+}
+img {
+    width: 200px;
+}
+a {
+    cursor: pointer;
+}
+.rateCakeForm {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+}
+h5.author {
+    margin: 0;
+}

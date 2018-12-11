@@ -1,0 +1,52 @@
+<h5 class="author">By {{ author }}</h5>
+<div class="container">
+    <div class="row">
+        <!-- CREATE CAKE FORM -->
+        <div class="createCakePanel">
+            <h4 class="createCakePanelSubTitle">Submit a cake to be rated</h4>
+            <form (submit)="createCakeFromService()">
+              <div>
+                  Baker Name:<br>
+                  <input type="text" size="35px" name="newCake.name" [(ngModel)]="newCake.name" />
+              </div>
+              <div>
+                  Image url:<br>
+                  <input type="text" size="35px" name="newCake.image" [(ngModel)]="newCake.image" />
+              </div>
+              <div>
+                  <input type="submit" value="Submit" class="submitCakeBtn" />
+              </div>
+            </form>
+        </div>
+
+        <!-- DISPLAY ALL CAKES TO THE RIGHT -->
+        <div class="displayCakes">
+            <div *ngFor="let cake of cakes">
+                <h4 class="bakerName">{{ cake.name }}</h4>
+                <a (click)="getThisCakeFromService(cake['_id'])"><img src="{{ cake.image }}" alt="cake" /></a>
+
+
+                <div class="rateCakeForm">
+                    <form (submit)="createRatingFromService(cake['_id'])">
+                        <select name="newRating.rating" [(ngModel)]="newRating.rating" >
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Star</option>
+                        </select>
+                        <div>
+                            <input type="text" size="30px" placeholder="Add a comment" name="newRating.comment" [(ngModel)]="newRating.comment" />
+                        </div>
+                        <input type="submit" value="Rate This Cake">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <app-cake *ngIf="displayOneCake == true" [cakeToShow]="selectedCake" [avgRating]="avgRating"></app-cake>
+
+    </div>
+</div>
+
+<router-outlet></router-outlet>

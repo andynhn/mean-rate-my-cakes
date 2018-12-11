@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="leftPanel">
+    <h1>Baked by {{cakeToShow.name}}</h1>
+    <img src="{{ cakeToShow.image }}" alt="cake" />
+  </div>
+  <div class="rightPanel">
+    <h3 *ngIf="avgRating > 0">Average Rating: {{avgRating}} stars</h3>
+    <h3 *ngIf="avgRating == 0">This cake has no ratings.</h3>
+    <div class="allRatings" *ngFor="let rating of cakeToShow.ratings">
+      <div class="oneRating">
+        <p>{{ rating['comment'] }}</p>
+        <p>{{ rating['rating'] }} stars</p>
+      </div>
+    </div>
+  </div>
+</div>

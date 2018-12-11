@@ -1,0 +1,27 @@
+img {
+    width: 500px;
+    display: inline-block;
+}
+.row {
+    display: inline-block;
+    display: flex;
+    justify-content: left;
+}
+.leftPanel {
+    display: inline-block;
+    vertical-align: top;
+}
+.rightPanel {
+    vertical-align: top;
+    padding-top: 60px;
+    max-height: 400px;
+    overflow: auto;
+    margin-left: 20px;
+}
+p {
+    display: block;
+    margin: 0px;
+}
+.oneRating {
+    margin-bottom: 10px;
+}
